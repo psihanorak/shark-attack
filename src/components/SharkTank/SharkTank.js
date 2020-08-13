@@ -1,7 +1,31 @@
-// pool that all living students are swimming in
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const sharkTank = [];
+import LiveStudent from '../LiveStudent/LiveStudent';
 
-const getSharkTank = () => sharkTank;
+import studentShape from '../../helpers/propz/studentShape';
 
-export default { getSharkTank };
+class SharkTank extends React.Component {
+  static propTypes = {
+    students: PropTypes.arrayOf(studentShape.studentShape),
+  }
+
+  render() {
+    const { students } = this.props;
+
+    const studentCards = students.map((student) => (
+      <LiveStudent key={student.id} student={student} />
+    ));
+
+    return (
+      <div>
+        <h2>Swim for your lives!!</h2>
+          <div className="card-columns">
+            {studentCards}
+          </div>
+      </div>
+    );
+  }
+}
+
+export default SharkTank;
