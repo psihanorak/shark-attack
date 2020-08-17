@@ -5,6 +5,8 @@ import GraveStone from '../GraveStone/GraveStone';
 
 import studentShape from '../../helpers/propz/studentShape';
 
+import './Graveyard.scss';
+
 class Graveyard extends React.Component {
   static propTypes = {
     deadStudents: PropTypes.arrayOf(studentShape.studentShape),
