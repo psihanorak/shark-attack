@@ -5,6 +5,8 @@ import LiveStudent from '../LiveStudent/LiveStudent';
 
 import studentShape from '../../helpers/propz/studentShape';
 
+import './SharkTank.scss';
+
 class SharkTank extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape.studentShape),

@@ -1,7 +1,35 @@
 @import 'variables';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body {
   background-color: $shadowBlue;
+  h1 {
+    font-size: 8em;
+    font-family: 'Bangers', cursive;
+  }
+}
+
+.shark-btn {
+  margin-top: 2em;
+  .btn-danger {
+    box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.75);
+  }
+}
+
+.shark-tank-container {
+  background-image: url(https://i.pinimg.com/564x/d4/c2/8b/d4c28b7eff6a47c68b270710a4869841.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.graveyard-container {
+  background-image: url(https://wallpaperaccess.com/full/1454447.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shark-student-container {
+  margin-top: 5em;
 }

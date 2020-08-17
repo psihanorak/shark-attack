@@ -31,10 +31,19 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1>Welcome to the Shark Tank!!</h1>
-        <button type="button" className="btn btn-danger btn-lg" onClick={this.followTheLight}>SHARK ATTACK</button>
-        <SharkTank students={students} />
-        <Graveyard deadStudents={deadStudents} />
+        <div className="shark-tank-container">
+          <h1>Welcome to the Shark Tank!!</h1>
+          <div className="shark-btn">
+            <button type="button" className="btn btn-danger btn-lg" onClick={this.followTheLight}>SHARK ATTACK</button>
+          </div>
+          <div className="shark-student-container">
+            <SharkTank students={students} />
+          </div>
+        </div>
+        <div className="graveyard-container">
+        <h1>Welcome to the Graveyard!!</h1>
+          <Graveyard deadStudents={deadStudents} />
+        </div>
       </div>
     );
   }
