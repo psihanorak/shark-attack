@@ -127,22 +127,18 @@ const students = [
   },
 ];
 
-const getStudents = () => students;
+const livingStudents = () => students.filter((student) => student.isAlive === true);
 
-const livingStudents = students.filter((student) => student.isAlive === true);
+const dearlyBeloved = () => students.filter((student) => student.isAlive === false);
 
 const followTheLight = () => {
-  const getStudentById = (studentId) => students.find((student) => student.id === studentId);
-  const random = Math.floor((Math.random() * 21) + 1);
-  const student = getStudentById(random);
-
-  if (student.isAlive === true) {
-    student.isAlive = false;
-  }
+  const getStudentById = livingStudents().map((student) => student.id);
+  const random = Math.floor(Math.random() * (getStudentById.length));
+  students.find((student) => student.id === getStudentById[random]).isAlive = false;
 };
 
 export default {
-  getStudents,
   livingStudents,
+  dearlyBeloved,
   followTheLight,
 };

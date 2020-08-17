@@ -1,4 +1,28 @@
-// burial ground for students who have not made it
-const graveyard = [];
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default { graveyard };
+import GraveStone from '../GraveStone/GraveStone';
+
+import studentShape from '../../helpers/propz/studentShape';
+
+class Graveyard extends React.Component {
+  static propTypes = {
+    deadStudents: PropTypes.arrayOf(studentShape.studentShape),
+  }
+
+  render() {
+    const { deadStudents } = this.props;
+
+    const studentCards = deadStudents.map((student) => (
+      <GraveStone key={student.id} student={student} />
+    ));
+
+    return (
+        <div className="graveyard">
+          { studentCards }
+        </div>
+    );
+  }
+}
+
+export default Graveyard;
