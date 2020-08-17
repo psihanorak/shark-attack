@@ -16,13 +16,7 @@ class LiveStudent extends React.Component {
       <div className="card bg-light mb-3">
         <div className="card-body">
           <h5 className="card-title">{student.firstName} {student.lastName}</h5>
-          { 
-            student.isAlive ? (
-              <i className="fas fa-heartbeat"></i>
-            ) : (
-              <i class="fas fa-skull"></i>
-            )
-          }
+          <i className="fas fa-heartbeat"></i>
         </div>
       </div>
     );
